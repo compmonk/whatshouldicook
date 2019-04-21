@@ -129,4 +129,4 @@ ENV/
 .~lock.*.csv#
 
 # Bower installed libraries
-.*/static/vendor/
+*/static/vendor/
