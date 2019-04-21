@@ -1,0 +1,24 @@
+{
+  "name": "whatshouldicook",
+  "authors": [
+    "Zubair Shaikh <zsescape@gmail.com>"
+  ],
+  "description": "Voice based recipe search engine",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./whatshouldicook/static/vendor/"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "Font-Awesome": "font-awesome#^5.8.1",
+    "angular": "^1.7.8"
+  }
+}
