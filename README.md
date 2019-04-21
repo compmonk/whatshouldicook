@@ -11,7 +11,7 @@ source venv/bin/activate
 sudo apt-get install -y $(grep -vE "^\s*#" packages.txt  | tr "\n" " ")
 pip install -r requirements.txt
 bower install
-python whatshouldicook/whatshouldicook/manage.py runserver
+python whatshouldicook/manage.py runserver
 ```
 
 

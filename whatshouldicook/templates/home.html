@@ -25,7 +25,7 @@
 </head>
 <body ng-app="app">
 <div align="center" id="header">
-    <h1 align="center">What should I cook today</h1>
+    <h1 align="center" style="color: white">What should I cook today ?</h1>
 </div>
 <div ng-controller="homeController">
     <div align="center" class="container" id="search-bar">
@@ -51,7 +51,7 @@
                         <h4 class="card-title" ng-bind="recipe.title"></h4>
                         <p class="card-text" ng-bind="recipe.ingredients"></p>
                         <!--<button type="button" class="btn btn-primary"><a ng-href="{{recipe.href}}">Checkout</a></button>-->
-                        <a href ng-href="{{recipe.href}}" class="btn btn-primary btn-sm">Checkout</a>
+                        <a href ng-href="{{recipe.href}}" class="btn btn-success btn-sm">Checkout</a>
                     </div>
                 </div>
             </div>

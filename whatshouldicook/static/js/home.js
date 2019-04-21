@@ -27,6 +27,7 @@
             .then(function(response) {
                 console.log(response.data);
                 $scope.recipes = response.data.recipes;
+                $scope.ingredients = response.data.ingredients;
             }
             , function (response) {
                 console.log("Unable to find a recipe " + response)
