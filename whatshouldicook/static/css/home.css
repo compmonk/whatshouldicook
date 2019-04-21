@@ -2,3 +2,15 @@ body {
  background-image: url("../img/home.jpg");
  background-color: #ffffff;
 }
+
+div.container.card-holder {
+    margin-top: 5%;
+}
+
+#header {
+    margin-top: 2%;
+}
+
+#search-bar {
+    margin-top: 6%;
+}

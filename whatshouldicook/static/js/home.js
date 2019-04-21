@@ -14,9 +14,10 @@
             $http.post('/recipe/search', data)
             .then(function(response) {
                 console.log(response.data);
+                $scope.recipes = response.data.recipes;
             }
             , function (response) {
-                console.log("unable to find a recipe" + response)
+                console.log("Unable to find a recipe " + response)
             });
         }
 
@@ -25,7 +26,11 @@
             $http.get('/recipe/listen')
             .then(function(response) {
                 console.log(response.data);
-            })
+                $scope.recipes = response.data.recipes;
+            }
+            , function (response) {
+                console.log("Unable to find a recipe " + response)
+            });
         }
     };
 

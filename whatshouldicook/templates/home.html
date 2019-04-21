@@ -11,12 +11,8 @@
     <!-- Angular JS-->
     <script src="{%static 'vendor/angular/angular.min.js' %}"></script>
 
-    <!-- Angular ngRoute-->
-    <!--<script src="{%static 'vendor/angular-route/angular-route.min.js' %}"></script>-->
-
     <!-- Custom js-->
     <script src="{%static 'js/home.js' %}"></script>
-    <!--<script src="{%static 'js/recipeController.js' %}"></script>-->
 
     <!-- Bootstrap-->
     <link href="{%static 'vendor/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -28,14 +24,38 @@
 
 </head>
 <body ng-app="app">
-<h1 align="center">What should I cook today</h1>
-<div ng-controller="homeController" class="input-group col-lg-6 text-left center-block">
-    <input ng-model="ingredients" type="text" class="form-control"
-           aria-label="Dollar amount (with dot and two decimal places)"
-           placeholder="List your ingredients here separated by a ,">
-    <div class="input-group-append">
-        <button type="button" class="input-group-text" ng-click="search()"><i class="fas fa-search"></i></button>
-        <button type="button" class="input-group-text" ng-click="listen()"><i class="fas fa-microphone"></i></button>
+<div align="center" id="header">
+    <h1 align="center">What should I cook today</h1>
+</div>
+<div ng-controller="homeController">
+    <div align="center" class="container" id="search-bar">
+        <div class="input-group">
+            <input ng-model="ingredients" type="text" class="form-control"
+                   placeholder="List your ingredients here separated by a ,">
+            <div class="input-group-append">
+                <button type="button" ng-disabled="!ingredients" class="input-group-text" ng-click="search()"><i
+                        class="fas fa-search"></i></button>
+                <button type="button" class="input-group-text" ng-click="listen()"><i class="fas fa-microphone"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container card-holder">
+        <div class="row text-center">
+            <div class="card-deck col-lg-3 col-md-6 mb-3" ng-repeat="recipe in recipes">
+                <div class="card mb-2">
+                    <!--<img class="card-img-top img-fluid" ng-src="{%static 'img/recipe.jpg' %}" alt="{%static 'img/recipe.jpg' %}">-->
+                    <div class="card-body">
+                        <h4 class="card-title" ng-bind="recipe.title"></h4>
+                        <p class="card-text" ng-bind="recipe.ingredients"></p>
+                        <!--<button type="button" class="btn btn-primary"><a ng-href="{{recipe.href}}">Checkout</a></button>-->
+                        <a href ng-href="{{recipe.href}}" class="btn btn-primary btn-sm">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
