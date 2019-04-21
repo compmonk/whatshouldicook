@@ -8,7 +8,7 @@ git clone https://github.com/compmonk/whatshouldicook.git
 cd whatshouldicook
 virtualenv -p /usr/bin/python3 venv
 source venv/bin/activate
-sudo apt-get install -y $(grep -vE "^\s*#" requirements/packages.txt  | tr "\n" " ")
+sudo apt-get install -y $(grep -vE "^\s*#" packages.txt  | tr "\n" " ")
 pip install -r requirements.txt
 bower install
 python whatshouldicook/whatshouldicook/manage.py runserver
