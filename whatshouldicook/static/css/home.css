@@ -14,3 +14,7 @@ div.container.card-holder {
 #search-bar {
     margin-top: 6%;
 }
+
+input[type="file"] {
+    display: none;
+}

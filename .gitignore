@@ -130,3 +130,5 @@ ENV/
 
 # Bower installed libraries
 */static/vendor/
+/whatshouldicook/upload/*
+/whatshouldicook/service_account.json
